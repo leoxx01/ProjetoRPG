@@ -1,0 +1,30 @@
+.person{
+    background-image: url("https://i1.wp.com/www.crieseusjogos.com.br/wp-content/uploads/2018/08/tutorial-criando-personagem-pixel-art.png?resize=248%2C250&ssl=1");
+    background-repeat: no-repeat;
+  }
+  .status{
+    background-color: #CC7722;
+    width: 160px;
+    height: 65px;
+    display: incline;
+    border:2px solid #A52A2A;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    margin-top: 5px;
+    margin-left: 3px;
+  }
+  .hpmp{
+    display: flex;
+    flex-direction: column;
+  }
+  .ajsute-hot-bar{
+     display: flex;
+    flex-direction: row;
+    background:black;
+    width:99%;
+  }
+  .progress-barr{
+     display: flex;
+    flex-direction: row;
+  }
