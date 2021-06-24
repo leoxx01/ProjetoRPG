@@ -1,4 +1,5 @@
 
+let chat = document.querySelector('.chat')
 document.querySelector('.person').style.marginLeft = '250px'
 document.addEventListener('keypress', keys)
 
