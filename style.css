@@ -28,3 +28,23 @@
      display: flex;
     flex-direction: row;
   }
+
+/*Chat css*/
+  .chat{
+    width: 250px;
+    height: 100px;
+    background: #DCDCDC;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    overflow-y: auto;
+  }
+  .campo{
+     width: 250px;
+     border-radius: 5px;
+      border: 1px solid #808080;
+  }
+.chatTodo{
+  margin-left: 3px;
+  position: absolute;
+  bottom: 0;
+}
