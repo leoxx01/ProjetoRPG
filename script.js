@@ -17,11 +17,24 @@ document.addEventListener('keypress', keys)
     console.log('aa')
   }
  }
+
  function checkCampoTextChat(){
 	if(document.querySelector('.campo').value != '' ){
-    console.log('a')
     document.querySelector('.chat').innerHTML= `${document.querySelector('.chat').innerHTML}<br>${document.querySelector('.campo').value}`
     document.querySelector('.campo').value = ''
   }
 }
+
+function getMessages() {
+  shouldScroll = chat.scrollTop + chat.clientHeight === chat.scrollHeight;
+  if (!shouldScroll) {
+    scrollToBottom();
+  }
+}
+
+function scrollToBottom() {
+  chat.scrollTop = chat.scrollHeight;
+}
+scrollToBottom();
+setInterval(getMessages, 100);
 
