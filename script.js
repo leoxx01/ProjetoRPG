@@ -4,18 +4,18 @@ document.querySelector('.person').style.marginLeft = '250px'
 document.addEventListener('keypress', keys)
 
  function keys(e){
+   console.log(e)
  	console.log(e.which)
-  if(e.which === 97){
+  if(e.code === 'KeyA'){
   	var a = parseInt(document.querySelector('.person').style.marginLeft)
     document.querySelector('.person').style.marginLeft = `${a-250}px`
   }
-  else if(e.which === 100){
+  else if(e.code === 'KeyD'){
   	var a = parseInt(document.querySelector('.person').style.marginLeft)
     document.querySelector('.person').style.marginLeft = `${a+250}px`
   }
-  else if(e.which === 13){
+  else if(e.code === 'Enter' || e.code === 'NumpadEnter'){
     checkCampoTextChat()
-    console.log('aa')
   }
  }
 
