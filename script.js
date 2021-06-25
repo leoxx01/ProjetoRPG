@@ -37,5 +37,5 @@ function scrollToBottom() {
   chat.scrollTop = chat.scrollHeight;
 }
 scrollToBottom();
-setInterval(getMessages, 100);
+setInterval(getMessages, 300);
 
