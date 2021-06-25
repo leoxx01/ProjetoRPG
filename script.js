@@ -39,3 +39,41 @@ function scrollToBottom() {
 scrollToBottom();
 setInterval(getMessages, 300);
 
+//Animation 
+
+const width = 110;
+const height = 132;
+const playerFrames = 6;
+
+
+window.onload = () => {
+  let canvas = document.createElement('canvas')
+  document.body.append(canvas)
+  ctx = canvas.getContext('2d')
+
+  spritesheet = new Image()
+  spritesheet.src = './assets/images/gaming_DinoSprites_walk.png'
+  frames = 0 
+  playerFrame = 0
+
+  spritesheet.onload = animate
+  
+  
+}
+
+const animate = () => {
+  ctx.clearRect(0, 0, width, height)
+  ctx.drawImage(
+    spritesheet,
+    width * playerFrame, 0,
+    width, height,
+    0, 0,
+    width, height
+  )
+  if(frames % 4 === 0){
+    playerFrame = (playerFrame + 1) % playerFrames
+  }
+
+  frames++
+  window.requestAnimationFrame(animate)
+}
