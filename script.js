@@ -9,6 +9,8 @@ document.addEventListener('keypress', keys)
   if(e.code === 'KeyA'){
   	var a = parseInt(document.querySelector('.person').style.marginLeft)
     document.querySelector('.person').style.marginLeft = `${a-250}px`
+    animate()
+    
   }
   else if(e.code === 'KeyD'){
   	var a = parseInt(document.querySelector('.person').style.marginLeft)
@@ -56,7 +58,7 @@ window.onload = () => {
   frames = 0 
   playerFrame = 0
 
-  spritesheet.onload = animate
+  //spritesheet.onload = animate
   
   
 }
@@ -75,5 +77,21 @@ const animate = () => {
   }
 
   frames++
-  window.requestAnimationFrame(animate)
+  if(frames % 4 === 0){
+    console.log('oi')
+    window.requestAnimationFrame(stopanimate)
+  }else{
+    window.requestAnimationFrame(animate)
+  }
+  
+}
+const stopanimate = () => {
+  ctx.clearRect(0, 0, width, height)
+  ctx.drawImage(
+    spritesheet,
+    width * playerFrame, 0,
+    width, height,
+    0, 0,
+    width, height
+  )
 }
