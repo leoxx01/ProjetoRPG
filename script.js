@@ -47,9 +47,9 @@ setInterval(getMessages, 300);
 
 //Animation 
 
-const width = 110;
+const width = 135;
 const height = 132;
-const playerFrames = 6;
+const playerFrames = 4;
 
 
 let canvas 
@@ -83,6 +83,8 @@ function desenhar() {
     }
     
       frames=+ 4 
+      console.log(playerFrame)
+      console.log(playerFrames)
 }
 /*const animate = () => {
   ctx.clearRect(0, 0, width, height)
